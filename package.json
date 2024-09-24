@@ -1,0 +1,42 @@
+{
+  "name": "gbmd-mdoc",
+  "version": "0.0.1",
+  "description": "Converts Gitbook md to Markdoc mdoc",
+  "type": "module",
+  "main": "index.js",
+  "bin": {
+    "gbmd-mdoc": "index.js"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "index.js",
+    "/src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hambergerpls/gbmd-mdoc.git"
+  },
+  "keywords": [
+    "gitbook",
+    "markdown",
+    "markdoc",
+    "converter"
+  ],
+  "author": "Danial Hanif <danial@hambergerpls.dev>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hambergerpls/gbmd-mdoc/issues"
+  },
+  "homepage": "https://github.com/hambergerpls/gbmd-mdoc#readme",
+  "dependencies": {
+    "@markdoc/markdoc": "^0.4.0",
+    "commander": "^12.1.0",
+    "glob": "^11.0.0"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.8",
+    "mocha": "^10.7.3"
+  }
+}
