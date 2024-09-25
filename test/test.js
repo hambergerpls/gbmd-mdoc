@@ -52,14 +52,14 @@ describe('Converting Gitbook templates', () => {
    it('Should convert Gitbook Design System template', () => {
       const filePaths = [...globSync(`./test/samples/design-system/**/*.md`)];
       for (const filePath of filePaths) {
-        const errors = convertFile(filePath);
+        const { errors } = convertFile(filePath);
         assert.deepEqual(errors, []);
       }
    })
    it('Should convert Gitbook Product Docs template', () => {
       const filePaths = [...globSync(`./test/samples/product-docs/**/*.md`)];
       for (const filePath of filePaths) {
-        const errors = convertFile(filePath);
+        const { errors } = convertFile(filePath);
         assert.deepEqual(errors, []);
       }
    })

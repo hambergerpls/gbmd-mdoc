@@ -55,7 +55,9 @@ export function convertFile(filePath){
     }
 
     ast = Markdoc.parse(file.join('\n'));
-    return Markdoc.validate(ast, config);
+    errors = Markdoc.validate(ast, config);
+
+    return { file, errors }
 }
 
 export async function gbmd_mdoc(options) {
@@ -76,7 +78,7 @@ export async function gbmd_mdoc(options) {
       continue;
     }
 
-    let errors = convertFile(filePath);
+    let {file, errors} = convertFile(filePath);
 
     if (errors.length !== 0) {
       process.stderr.write(filePath)
@@ -85,8 +87,8 @@ export async function gbmd_mdoc(options) {
     }
     else {
       const dataOutput = new Uint8Array(Buffer.from(file.join('\n')))
-      mkdirSync(`${outputPath}/${dirname(filePath)}`, {recursive: true});
-      writeFileSync(`${outputPath}/${filePath.replace(/\.md$/,'.mdoc')}`, dataOutput)
+      mkdirSync(`${outputPath}/${dirname(filePath.replace(inputPath, ''))}`, {recursive: true});
+      writeFileSync(`${outputPath}/${filePath.replace(inputPath, '').replace(/\.md$/, '.mdoc')}`, dataOutput)
     }
   }
 }
