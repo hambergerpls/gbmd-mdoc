@@ -1,4 +1,4 @@
-# gbmd-mdoc (Work in progress)
+# gbmd-mdoc
 CLI tool to convert synced [Gitbook's](https://gitbook.com) markdown syntax to [Markdoc's](https://markdoc.dev)
 
 ## Purpose

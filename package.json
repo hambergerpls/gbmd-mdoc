@@ -1,6 +1,6 @@
 {
   "name": "gbmd-mdoc",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Converts Gitbook md to Markdoc mdoc",
   "type": "module",
   "main": "index.js",
