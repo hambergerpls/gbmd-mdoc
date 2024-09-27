@@ -3,6 +3,7 @@ import { dirname } from 'node:path';
 import Markdoc from '@markdoc/markdoc';
 import { globSync } from 'glob';
 import { config } from './markdoc.config.js';
+import yaml from 'js-yaml';
 
 const selfEnclosingTags = [
   'embed',
@@ -37,8 +38,23 @@ export function resolveSelfEnclosingTag(errors, file){
   }
 }
 
+/**
+ * @param {import('@markdoc/markdoc').Node} ast 
+ */
+export function extractTitleToFrontmatter(ast){
+  for (const node of ast.walk()) {
+    if ( node.type === 'heading' && node.attributes.level === 1 ) {
+       const frontmatter = ast.attributes.frontmatter ? yaml.load(ast.attributes.frontmatter) : {};
+       frontmatter.title = node.children.find(e => e.type === 'inline').children.find(e => e.type === 'text').attributes.content;
+       ast.attributes.frontmatter = yaml.dump(frontmatter);
+       return Markdoc.format(ast);
+    }
+  }
+  return Markdoc.format(ast);
+}
+
 export function convertFile(filePath){
-    const file = readFileSync(filePath, { encoding: 'utf8', flag: 'r' }).split('\n');
+    let file = readFileSync(filePath, { encoding: 'utf8', flag: 'r' }).split('\n');
 
     let ast = Markdoc.parse(file.join('\n'));
     let errors = Markdoc.validate(ast, config);
@@ -56,6 +72,8 @@ export function convertFile(filePath){
 
     ast = Markdoc.parse(file.join('\n'));
     errors = Markdoc.validate(ast, config);
+
+    file = extractTitleToFrontmatter(ast).split('\n');
 
     return { file, errors }
 }

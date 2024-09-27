@@ -4,7 +4,7 @@ import { describe } from "mocha";
 import assert from "assert";
 import Markdoc from '@markdoc/markdoc';
 import { config } from '../src/markdoc.config.js';
-import { convertFile, resolveClosingTag, resolveSelfEnclosingTag } from "../src/index.js";
+import { convertFile, extractTitleToFrontmatter, resolveClosingTag, resolveSelfEnclosingTag } from "../src/index.js";
 import { globSync } from 'glob';
 
 describe('Closing tags', () => {
@@ -46,6 +46,17 @@ describe('Closing tags', () => {
     errors = Markdoc.validate(ast, config);
     assert.deepEqual(errors, []);
   });
+});
+
+describe('Frontmatter', () => {
+   it('Should add first level 1 heading as title to frontmatter', () => {
+    const file = readFileSync('./test/samples/title-to-frontmatter.md', { encoding: 'utf8', flag: 'r' }).split('\n');
+
+    let ast = Markdoc.parse(file.join('\n'));
+    const result = extractTitleToFrontmatter(ast, file);
+    ast = Markdoc.parse(result)
+    assert.equal(ast.attributes.frontmatter,'title: This is my page title')
+   })
 });
 
 describe('Converting Gitbook templates', () => {
