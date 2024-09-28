@@ -1,6 +1,13 @@
 # gbmd-mdoc
 CLI tool to convert synced [Gitbook's](https://gitbook.com) markdown syntax to [Markdoc's](https://markdoc.dev)
 
+## Usage
+
+```bash
+gbmd-mdoc -i inputDir -o outputDir
+
+```
+
 ## Purpose
 The reason why this tool exists is because I want integrate Gitbook with Astro. Unfortunately, based on Astro's documentation on [migrate Gitbook with Astro](https://docs.astro.build/en/guides/migrate-to-astro/from-gitbook/), it only shows on how to export markdowns from Gitbook to Astro's content directory and need to manually convert Gitbook's syntax to Markdoc. Which also implies completely migrating away from Gitbook and use Astro for writing content.
 
