@@ -3,8 +3,8 @@ import { it } from "mocha";
 import { describe } from "mocha";
 import assert from "assert";
 import Markdoc from '@markdoc/markdoc';
-import { config } from '../src/markdoc.config.js';
-import { convertFile, extractTitleToFrontmatter, resolveClosingTag, resolveSelfEnclosingTag } from "../src/index.js";
+import { config } from 'gbmd-mdoc/config';
+import { convertFile, extractTitleToFrontmatter, resolveClosingTag, resolveSelfEnclosingTag } from "gbmd-mdoc";
 import { globSync } from 'glob';
 
 describe('Closing tags', () => {

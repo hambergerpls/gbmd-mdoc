@@ -3,7 +3,6 @@
   "version": "0.0.3",
   "description": "Converts Gitbook md to Markdoc mdoc",
   "type": "module",
-  "main": "index.js",
   "bin": {
     "gbmd-mdoc": "index.js"
   },
@@ -17,7 +16,8 @@
   "exports": {
     ".": "./src/index.js",
     "./schema": "./src/schema/index.js",
-    "./attributes": "./src/schema/index.js"
+    "./attributes": "./src/schema/index.js",
+    "./config": "./src/markdoc.config.js"
   },
   "repository": {
     "type": "git",
@@ -43,6 +43,7 @@
   },
   "devDependencies": {
     "@types/mocha": "^10.0.8",
-    "mocha": "^10.7.3"
+    "mocha": "^10.7.3",
+    "gbmd-mdoc": "."
   }
 }

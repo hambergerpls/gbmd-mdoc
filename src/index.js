@@ -5,7 +5,7 @@ import { globSync } from 'glob';
 import { config } from './markdoc.config.js';
 import yaml from 'js-yaml';
 
-const selfEnclosingTags = [
+export const selfEnclosingTags = [
   'embed',
 ]; 
 
