@@ -1,5 +1,6 @@
-
-/** @type {import('@markdoc/markdoc').Schema} */
+/**
+ * @type {import('@markdoc/markdoc').Schema}
+ */
 export const contentref = {
   render: 'ContentRef',
   children: ['link', 'paragraph', 'tag'],

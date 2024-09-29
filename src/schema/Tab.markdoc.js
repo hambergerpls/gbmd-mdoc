@@ -1,5 +1,6 @@
-
-/** @type {import('@markdoc/markdoc').Schema} */
+/**
+ * @type {import('@markdoc/markdoc').Schema}
+ */
 export const tab = {
   render: 'Tab',
   attributes: {

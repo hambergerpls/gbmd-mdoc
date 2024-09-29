@@ -1,3 +1,7 @@
+/**
+ * @typedef {import('@markdoc/markdoc').Config} Config
+ */
+
 import { hint, embed, contentref, tab, tabs } from './schema/index.js';
 
 const tags = {
@@ -9,7 +13,9 @@ const tags = {
 
 tags['content-ref'] = contentref
 
-/** @type {import('@markdoc/markdoc').Config} */
+/**
+ * @type {Config}
+ */
 export const config = {
   tags: tags
 };

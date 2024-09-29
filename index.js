@@ -1,7 +1,7 @@
 #! /usr/bin/env node
 
 import { program } from 'commander';
-import { gbmd_mdoc } from './src/index.js';
+import { gbmd_mdoc } from 'gbmd-mdoc';
 
 program
   .name('gbmd-mdoc')

@@ -1,5 +1,6 @@
-
-/** @type {import('@markdoc/markdoc').Schema} */
+/**
+ * @type {import('@markdoc/markdoc').Schema}
+ */
 export const hint = {
   render: 'Hint',
   children: ['paragraph', 'tag', 'list'],

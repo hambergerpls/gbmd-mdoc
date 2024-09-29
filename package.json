@@ -13,12 +13,7 @@
     "index.js",
     "/src"
   ],
-  "exports": {
-    ".": "./src/index.js",
-    "./schema": "./src/schema/index.js",
-    "./attributes": "./src/schema/index.js",
-    "./config": "./src/markdoc.config.js"
-  },
+  "main": "./src/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hambergerpls/gbmd-mdoc.git"
@@ -43,7 +38,6 @@
   },
   "devDependencies": {
     "@types/mocha": "^10.0.8",
-    "mocha": "^10.7.3",
-    "gbmd-mdoc": "."
+    "mocha": "^10.7.3"
   }
 }

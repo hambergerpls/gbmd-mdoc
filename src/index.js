@@ -1,3 +1,8 @@
+/**
+ * @typedef {import('@markdoc/markdoc').Node} Node
+ * @typedef {import('@markdoc/markdoc').ValidateError} ValidateError
+ */
+
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname } from 'node:path';
 import Markdoc from '@markdoc/markdoc';
@@ -9,7 +14,11 @@ export const selfEnclosingTags = [
   'embed',
 ]; 
 
-export function resolveClosingTag(errors, file){
+/**
+ * @param {ValidateError[]} errors 
+ * @param {string[]} file 
+ */
+export function resolveClosingTag(errors, file) {
   for (const error of errors) {
     if (error.type === 'tag' && error.error.id === 'missing-closing') {
       const match = [ ...error.error.message.matchAll(/'(end.*)'/g) ]
@@ -17,12 +26,16 @@ export function resolveClosingTag(errors, file){
         continue;
       }
       const [[_, tag]] = match;
-      file[error.location.start.line] = file[error.location.start.line].replace(`${tag}`, `${tag.replace('end', '/')}`)
+      file[error.location?.start.line] = file[error.location?.start.line].replace(`${tag}`, `${tag.replace('end', '/')}`)
     }
   }
 }
 
-export function resolveSelfEnclosingTag(errors, file){
+/**
+ * @param {ValidateError[]} errors 
+ * @param {string[]} file 
+ */
+export function resolveSelfEnclosingTag(errors, file) {
   for (const error of errors) {
     if (error.type === 'tag' && error.error.id === 'missing-closing') {
 
@@ -32,16 +45,16 @@ export function resolveSelfEnclosingTag(errors, file){
       }
       const [[_, tag]] = match;
       if (selfEnclosingTags.includes(tag)) {
-        file[error.location.start.line] = file[error.location.start.line].replace(" %}", " /%}")
+        file[error.location?.start.line] = file[error.location?.start.line].replace(" %}", " /%}")
       }
     }
   }
 }
 
 /**
- * @param {import('@markdoc/markdoc').Node} ast 
+ * @param {Node} ast 
  */
-export function extractTitleToFrontmatter(ast){
+export function extractTitleToFrontmatter(ast) {
   for (const node of ast.walk()) {
     if ( node.type === 'heading' && node.attributes.level === 1 ) {
        const frontmatter = ast.attributes.frontmatter ? yaml.load(ast.attributes.frontmatter) : {};
@@ -53,7 +66,10 @@ export function extractTitleToFrontmatter(ast){
   return Markdoc.format(ast);
 }
 
-export function convertFile(filePath){
+/**
+ * @param {string} filePath 
+ */
+export function convertFile(filePath) {
     let file = readFileSync(filePath, { encoding: 'utf8', flag: 'r' }).split('\n');
 
     let ast = Markdoc.parse(file.join('\n'));
@@ -78,6 +94,9 @@ export function convertFile(filePath){
     return { file, errors }
 }
 
+/**
+ * @param {{ input: string, output: string }} options 
+ */
 export async function gbmd_mdoc(options) {
 
   const inputPath = options.input;
@@ -110,3 +129,7 @@ export async function gbmd_mdoc(options) {
     }
   }
 }
+
+export { config };
+export * as Schema from './schema/index.js'
+export * as Attributes from './attributes/index.js'
