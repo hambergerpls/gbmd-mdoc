@@ -1,6 +1,6 @@
 {
   "name": "gbmd-mdoc",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Converts Gitbook md to Markdoc mdoc",
   "bin": {
     "gbmd-mdoc": "program.ts"
@@ -9,7 +9,8 @@
     "test": "mocha",
     "build": "npm run build:common && npm run build:types",
     "build:common": "node build.js",
-    "build:types": "tsc --emitDeclarationOnly --outDir dist"
+    "build:types": "tsc --emitDeclarationOnly --outDir dist",
+    "publish": "npm publish"
   },
   "mocha": {
     "extension": [
