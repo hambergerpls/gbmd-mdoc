@@ -1,13 +1,14 @@
 {
-  "include": ["src/**/*", "index.ts"],
+  "include": ["**/*.ts", "**/*.d.ts"],
+  "exclude": ["dist", "test", "**/*.spec.ts"],
   "compilerOptions": {
-    "rootDir": ".",
-    "module": "es2020",
-    "moduleResolution": "bundler",
-    "target": "es2020",
-    "esModuleInterop": true,
+    "strict": true,
+    "target": "ES2021",
+    "lib": ["ES2021"],
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
     "declaration": true,
     "declarationMap": true,
-    "outDir": "dist"
+    "moduleResolution": "node"
   }
 }
