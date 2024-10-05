@@ -1,7 +1,6 @@
-/**
- * @type {import('@markdoc/markdoc').Schema}
- */
-export const hint = {
+import { Schema } from "@markdoc/markdoc";
+
+export const hint: Schema = {
   render: 'Hint',
   children: ['paragraph', 'tag', 'list'],
   attributes: {

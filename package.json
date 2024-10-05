@@ -4,16 +4,24 @@
   "description": "Converts Gitbook md to Markdoc mdoc",
   "type": "module",
   "bin": {
-    "gbmd-mdoc": "index.js"
+    "gbmd-mdoc": "program.ts"
   },
   "scripts": {
     "test": "mocha"
   },
+  "mocha": {
+    "extension": [
+      "spec.ts"
+    ],
+    "require": "tsx"
+  },
   "files": [
-    "index.js",
-    "/src"
+    "index.ts",
+    "program.ts",
+    "dist"
   ],
-  "main": "./src/index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hambergerpls/gbmd-mdoc.git"
@@ -37,7 +45,11 @@
     "js-yaml": "^4.1.0"
   },
   "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
     "@types/mocha": "^10.0.8",
-    "mocha": "^10.7.3"
+    "@types/node": "^22.7.4",
+    "mocha": "^10.7.3",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.2"
   }
 }

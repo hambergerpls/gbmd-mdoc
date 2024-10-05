@@ -3,7 +3,7 @@ import { it } from "mocha";
 import { describe } from "mocha";
 import assert from "assert";
 import Markdoc from '@markdoc/markdoc';
-import { convertFile, extractTitleToFrontmatter, resolveClosingTag, resolveSelfEnclosingTag, config } from "../src/index.js";
+import { convertFile, extractTitleToFrontmatter, resolveClosingTag, resolveSelfEnclosingTag, defaultConfig } from "../";
 import { globSync } from 'glob';
 
 describe('Closing tags', () => {
@@ -12,11 +12,11 @@ describe('Closing tags', () => {
     const file = readFileSync('./test/samples/closingtags.md', { encoding: 'utf8', flag: 'r' }).split('\n');
 
     let ast = Markdoc.parse(file.join('\n'));
-    let errors = Markdoc.validate(ast, config);
+    let errors = Markdoc.validate(ast, defaultConfig);
     assert.notEqual(errors.length, 0);
     resolveClosingTag(errors, file);
     ast = Markdoc.parse(file.join('\n'));
-    errors = Markdoc.validate(ast, config);
+    errors = Markdoc.validate(ast, defaultConfig);
     assert.deepEqual(errors, []);
   });
 
@@ -25,11 +25,11 @@ describe('Closing tags', () => {
     const file = readFileSync('./test/samples/closingtags-with-nested-tags.md', { encoding: 'utf8', flag: 'r' }).split('\n');
 
     let ast = Markdoc.parse(file.join('\n'));
-    let errors = Markdoc.validate(ast, config);
+    let errors = Markdoc.validate(ast, defaultConfig);
     assert.notEqual(errors.length, 0);
     resolveClosingTag(errors, file);
     ast = Markdoc.parse(file.join('\n'));
-    errors = Markdoc.validate(ast, config);
+    errors = Markdoc.validate(ast, defaultConfig);
     assert.deepEqual(errors, []);
   });
 
@@ -38,11 +38,11 @@ describe('Closing tags', () => {
     const file = readFileSync('./test/samples/selfenclosingtags.md', { encoding: 'utf8', flag: 'r' }).split('\n');
 
     let ast = Markdoc.parse(file.join('\n'));
-    let errors = Markdoc.validate(ast, config);
+    let errors = Markdoc.validate(ast, defaultConfig);
     assert.notEqual(errors.length, 0);
     resolveSelfEnclosingTag(errors, file);
     ast = Markdoc.parse(file.join('\n'));
-    errors = Markdoc.validate(ast, config);
+    errors = Markdoc.validate(ast, defaultConfig);
     assert.deepEqual(errors, []);
   });
 });
@@ -52,7 +52,7 @@ describe('Frontmatter', () => {
     const file = readFileSync('./test/samples/title-to-frontmatter.md', { encoding: 'utf8', flag: 'r' }).split('\n');
 
     let ast = Markdoc.parse(file.join('\n'));
-    const result = extractTitleToFrontmatter(ast, file);
+    const result = extractTitleToFrontmatter(ast);
     ast = Markdoc.parse(result)
     assert.equal(ast.attributes.frontmatter,'title: This is my page title')
    })

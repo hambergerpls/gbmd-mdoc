@@ -1,7 +1,6 @@
-/**
- * @type {import('@markdoc/markdoc').Schema}
- */
-export const contentref = {
+import { Schema } from "@markdoc/markdoc";
+
+export const contentref: Schema = {
   render: 'ContentRef',
   children: ['link', 'paragraph', 'tag'],
   attributes: {

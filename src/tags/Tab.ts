@@ -1,7 +1,6 @@
-/**
- * @type {import('@markdoc/markdoc').Schema}
- */
-export const tab = {
+import { Schema } from "@markdoc/markdoc";
+
+export const tab: Schema = {
   render: 'Tab',
   attributes: {
     title: {
