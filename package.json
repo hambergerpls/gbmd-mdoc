@@ -16,7 +16,6 @@
     "require": "tsx"
   },
   "files": [
-    "index.ts",
     "program.ts",
     "dist"
   ],
