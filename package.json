@@ -9,8 +9,7 @@
     "test": "mocha",
     "build": "npm run build:common && npm run build:types",
     "build:common": "node build.js",
-    "build:types": "tsc --emitDeclarationOnly --outDir dist",
-    "publish": "npm publish"
+    "build:types": "tsc --emitDeclarationOnly --outDir dist"
   },
   "mocha": {
     "extension": [
