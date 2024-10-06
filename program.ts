@@ -73,7 +73,7 @@ async function gbmd_mdoc(options: { input: string; output: string }, config: Con
 program
   .name('gbmd-mdoc')
   .description('Converts Gitbook md to Markdoc mdoc')
-  .version('0.1.1')
+  .version('0.1.2')
   .requiredOption('-o, --output <dir>', 'output directory')
   .requiredOption('-i, --input <dir>', 'input directory')
   .action(gbmd_mdoc)
