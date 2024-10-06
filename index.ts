@@ -65,6 +65,7 @@ export {
 export default class GBMD_MDOC {
   static tags = tags;
   static schemas = schemas;
+  static defaultConfig = defaultConfig;
   static resolveClosingTag = resolveClosingTag;
   static resolveSelfEnclosingTag = resolveSelfEnclosingTag;
   static extractTitleToFrontmatter = extractTitleToFrontmatter;
