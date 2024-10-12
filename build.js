@@ -9,6 +9,13 @@ const shared = {
   external: [],
   format: 'esm',
 };
-
 buildSync({ ...shared, format: 'cjs' });
 buildSync({ ...shared, outExtension: { '.js': '.mjs' } });
+
+const program = {
+  ...shared,
+  entryPoints: ['program.ts'],
+  platform: 'node',
+}
+buildSync({ ...program, format: 'cjs' });
+

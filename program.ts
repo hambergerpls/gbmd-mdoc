@@ -1,4 +1,4 @@
-#!/usr/bin/env -S npx tsx
+#!/usr/bin/env node
 
 import { program } from 'commander';
 import { defaultConfig, resolveClosingTag, resolveSelfEnclosingTag, extractTitleToFrontmatter } from '.';
