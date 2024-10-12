@@ -1,4 +1,4 @@
-import Markdoc, { Config, type Node, type ValidateError } from '@markdoc/markdoc';
+import Markdoc, { Config, type Node } from '@markdoc/markdoc';
 import { config as defaultConfig } from './src/markdoc.config';
 import yaml from 'js-yaml';
 import { type GitBookFrontmatter } from './src/types';
@@ -6,7 +6,10 @@ import tags from './src/tags';
 import schemas from './src/schemas';
 
 
-export function resolveClosingTag(errors: ValidateError[], file: string[]) {
+export function resolveClosingTag(content: string, config: Config = defaultConfig) {
+  let ast = Markdoc.parse(content);
+  const file = content.split('\n');
+  let errors = Markdoc.validate(ast, config);
   for (const error of errors) {
     if (error.type === 'tag' && error.error.id === 'missing-closing') {
       const match = [ ...error.error.message.matchAll(/'(end.*)'/g) ]
@@ -17,10 +20,17 @@ export function resolveClosingTag(errors: ValidateError[], file: string[]) {
       if (error.location) file[error.location?.start.line] = file[error.location?.start.line].replace(`${tag}`, `${tag.replace('end', '/')}`)
     }
   }
+  const result = file.join('\n');
+  ast = Markdoc.parse(result);
+  errors = Markdoc.validate(ast, config);
+  return { result, errors }
 }
 
-export function resolveSelfEnclosingTag(errors: ValidateError[], file: string[], selfEnclosingTags: string[] = []) {
+export function resolveSelfEnclosingTag(content: string, config: Config = defaultConfig, selfEnclosingTags: string[] = []) {
   selfEnclosingTags = [ 'embed', ...selfEnclosingTags ]
+  let ast = Markdoc.parse(content);
+  const file = content.split('\n');
+  let errors = Markdoc.validate(ast, config);
   for (const error of errors) {
     if (error.type === 'tag' && error.error.id === 'missing-closing') {
 
@@ -34,27 +44,37 @@ export function resolveSelfEnclosingTag(errors: ValidateError[], file: string[],
       }
     }
   }
+  const result = file.join('\n');
+  ast = Markdoc.parse(result);
+  errors = Markdoc.validate(ast, config);
+  return { result, errors }
 }
 
-export function extractTitleToFrontmatter(ast: Node) {
+export function extractTitleToFrontmatter(content: string, config: Config = defaultConfig) {
+  let ast = Markdoc.parse(content);
   for (const node of ast.walk()) {
     if ( node.type === 'heading' && node.attributes.level === 1 ) {
        const frontmatter = ( ast.attributes.frontmatter ? yaml.load(ast.attributes.frontmatter) : {} ) as GitBookFrontmatter;
        frontmatter.title = node.children.find(e => e.type === 'inline')?.children.find(e => e.type === 'text')?.attributes.content;
        ast.attributes.frontmatter = yaml.dump(frontmatter);
-       return Markdoc.format(ast);
+       break;
     }
   }
-  return Markdoc.format(ast);
+  const file = Markdoc.format(ast);
+  ast = Markdoc.parse(file);
+  let errors = Markdoc.validate(ast, config);
+  return { result: file, errors };
 }
 
-export function appendToFrontmatter(ast: Node, data: { [key: string]: any }) {
+export function appendToFrontmatter(content: string, data: { [key: string]: any }, config: Config = defaultConfig) {
+  let ast = Markdoc.parse(content);
   const frontmatter = ( ast.attributes.frontmatter ? yaml.load(ast.attributes.frontmatter) : {} ) as GitBookFrontmatter;
   ast.attributes.frontmatter = yaml.dump({ ...frontmatter, ...data});
-  return Markdoc.format(ast);
+  const file = Markdoc.format(ast);
+  ast = Markdoc.parse(file);
+  let errors = Markdoc.validate(ast, config);
+  return { result: file, errors };
 }
-
-
 
 export {
   tags,

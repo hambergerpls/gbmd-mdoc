@@ -51,7 +51,6 @@
     "@types/mocha": "^10.0.8",
     "@types/node": "^22.7.4",
     "esbuild": "^0.24.0",
-    "gbmd-mdoc": "file:./gbmd-mdoc-0.0.7.tgz",
     "mocha": "^10.7.3",
     "tsx": "^4.19.1",
     "typescript": "^5.6.2"
