@@ -60,7 +60,7 @@ if (process.env.NODE_ENV !== 'test') {
   program
     .name('gbmd-mdoc')
     .description('Converts Gitbook md to Markdoc mdoc')
-    .version('0.1.2')
+    .version('0.1.3')
     .requiredOption('-o, --output <dir>', 'output directory')
     .requiredOption('-i, --input <dir>', 'input directory')
     .action(gbmd_mdoc)
