@@ -1,29 +1,19 @@
 {
-  "name": "gbmd-mdoc",
-  "version": "0.1.4",
-  "description": "Converts Gitbook md to Markdoc mdoc",
-  "bin": {
-    "gbmd-mdoc": "dist/program.js"
-  },
+  "name": "@gbmd-mdoc/astro",
+  "version": "0.0.0",
+  "description": "Add support for integrating Gitbook Markdown for Astro",
   "scripts": {
     "test": "mocha",
     "build": "npm run build:common && npm run build:types",
     "build:common": "node build.js",
     "build:types": "tsc --emitDeclarationOnly --outDir dist"
   },
-  "workspaces": [
-    "packages/integrations/**/*"
-  ],
   "mocha": {
     "extension": [
       "spec.ts"
     ],
     "require": "tsx"
   },
-  "files": [
-    "program.ts",
-    "dist"
-  ],
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
@@ -35,19 +25,24 @@
     "gitbook",
     "markdown",
     "markdoc",
-    "converter"
+    "converter",
+    "astro"
   ],
   "author": "Danial Hanif <danial@hambergerpls.dev>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/hambergerpls/gbmd-mdoc/issues"
   },
-  "homepage": "https://github.com/hambergerpls/gbmd-mdoc#readme",
+  "homepage": "https://github.com/hambergerpls/gbmd-mdoc/tree/main/packages/integrations/astro#readme",
   "dependencies": {
     "@markdoc/markdoc": "^0.4.0",
-    "commander": "^12.1.0",
+    "@gitbook/api": "^0.66.0",
     "glob": "^11.0.0",
     "js-yaml": "^4.1.0"
+  },
+  "peerDependencies": {
+    "astro": "^3.0.0 || ^4.0.0",
+    "gbmd-mdoc": "^0.1.4"
   },
   "devDependencies": {
     "@types/js-yaml": "^4.0.9",

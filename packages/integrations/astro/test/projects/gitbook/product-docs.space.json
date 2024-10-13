@@ -1,0 +1,362 @@
+{
+  "object": "revision",
+  "id": "DMYLQpnWpXiwubyyONPj",
+  "parents": [
+    "hvvtcwtfnVPGKNgVtx5N",
+    "hvvtcwtfnVPGKNgVtx5N"
+  ],
+  "pages": [
+    {
+      "id": "kGVMjWQ3cLJdc9z5i3jg",
+      "title": "Welcome to A Product",
+      "emoji": "1f44b",
+      "kind": "sheet",
+      "type": "document",
+      "urls": {
+        "app": "https://app.gitbook.com/s/hxDBw09hQxpjHimuTkpg/welcome-to-a-product"
+      },
+      "path": "welcome-to-a-product",
+      "slug": "welcome-to-a-product",
+      "documentId": "y3aYKOFi0SXLftXrCvEI",
+      "createdAt": "2024-09-24T09:47:50.137Z",
+      "updatedAt": "2024-09-24T09:47:50.137Z",
+      "git": {
+        "oid": "5c39b86a4e084c3a349df8c982cea9ef566943e4",
+        "path": "gitbook/product-docs/README.md"
+      },
+      "pages": [],
+      "layout": {
+        "cover": true,
+        "coverSize": "full",
+        "title": true,
+        "description": true,
+        "tableOfContents": true,
+        "outline": true,
+        "pagination": true
+      }
+    },
+    {
+      "id": "6jRDsjPhmQUqwcRc8spo",
+      "title": "Overview",
+      "kind": "group",
+      "type": "group",
+      "path": "overview",
+      "slug": "overview",
+      "createdAt": "2024-09-24T09:47:50.137Z",
+      "updatedAt": "2024-09-24T09:47:50.137Z",
+      "pages": [
+        {
+          "id": "indXhnIYeOLWKDQD66s9",
+          "title": "What we do",
+          "emoji": "1f4a1",
+          "kind": "sheet",
+          "type": "document",
+          "urls": {
+            "app": "https://app.gitbook.com/s/hxDBw09hQxpjHimuTkpg/overview/what-we-do"
+          },
+          "path": "overview/what-we-do",
+          "slug": "what-we-do",
+          "documentId": "mvyX5vbZvlIHAs6HJaaF",
+          "createdAt": "2024-09-24T09:47:50.138Z",
+          "updatedAt": "2024-09-24T09:47:50.138Z",
+          "git": {
+            "oid": "a34949f27ca03238e069394c37f9338cb3df74ba",
+            "path": "gitbook/product-docs/overview/what-we-do.md"
+          },
+          "pages": [],
+          "layout": {
+            "cover": true,
+            "coverSize": "full",
+            "title": true,
+            "description": true,
+            "tableOfContents": true,
+            "outline": true,
+            "pagination": true
+          }
+        },
+        {
+          "id": "wWZzBEFZ4DxuaHGQBnGp",
+          "title": "Our Features",
+          "emoji": "2728",
+          "kind": "sheet",
+          "type": "document",
+          "urls": {
+            "app": "https://app.gitbook.com/s/hxDBw09hQxpjHimuTkpg/overview/our-features"
+          },
+          "path": "overview/our-features",
+          "slug": "our-features",
+          "documentId": "ztst62n1TXHLAMDZh5s6",
+          "createdAt": "2024-09-24T09:47:50.138Z",
+          "updatedAt": "2024-09-24T09:47:50.138Z",
+          "git": {
+            "oid": "4bd7e5d1e5a8731a73066d4e62c8e4cf8239923c",
+            "path": "gitbook/product-docs/overview/our-features.md"
+          },
+          "pages": [],
+          "layout": {
+            "cover": true,
+            "coverSize": "full",
+            "title": true,
+            "description": true,
+            "tableOfContents": true,
+            "outline": true,
+            "pagination": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "o93R9prdmPV7yECPe17w",
+      "title": "Product Guides",
+      "kind": "group",
+      "type": "group",
+      "path": "product-guides",
+      "slug": "product-guides",
+      "createdAt": "2024-09-24T09:47:50.138Z",
+      "updatedAt": "2024-09-24T09:47:50.138Z",
+      "pages": [
+        {
+          "id": "K0BVQsBOsfRgB2wTLbph",
+          "title": "Making a post",
+          "emoji": "1f4ea",
+          "kind": "sheet",
+          "type": "document",
+          "urls": {
+            "app": "https://app.gitbook.com/s/hxDBw09hQxpjHimuTkpg/product-guides/making-a-post"
+          },
+          "path": "product-guides/making-a-post",
+          "slug": "making-a-post",
+          "documentId": "10fBQ7KIc7CJwINfNvlN",
+          "createdAt": "2024-09-24T09:47:50.139Z",
+          "updatedAt": "2024-09-24T09:47:50.139Z",
+          "git": {
+            "oid": "3a9f3559a18349a6f479fe003d08a1ed43d31071",
+            "path": "gitbook/product-docs/product-guides/making-a-post.md"
+          },
+          "pages": [],
+          "layout": {
+            "cover": true,
+            "coverSize": "full",
+            "title": true,
+            "description": true,
+            "tableOfContents": true,
+            "outline": true,
+            "pagination": true
+          }
+        },
+        {
+          "id": "CasxD8Z5CRolnx8OiKPL",
+          "title": "Understanding Projects",
+          "emoji": "1f4ce",
+          "kind": "sheet",
+          "type": "document",
+          "urls": {
+            "app": "https://app.gitbook.com/s/hxDBw09hQxpjHimuTkpg/product-guides/understanding-projects"
+          },
+          "path": "product-guides/understanding-projects",
+          "slug": "understanding-projects",
+          "documentId": "dWbUjUTQWLY3IxgkonxT",
+          "createdAt": "2024-09-24T09:47:50.139Z",
+          "updatedAt": "2024-09-24T09:47:50.139Z",
+          "git": {
+            "oid": "fb72972704fb4f9896ac43aac03c7665c05828cb",
+            "path": "gitbook/product-docs/product-guides/understanding-projects.md"
+          },
+          "pages": [],
+          "layout": {
+            "cover": true,
+            "coverSize": "full",
+            "title": true,
+            "description": true,
+            "tableOfContents": true,
+            "outline": true,
+            "pagination": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "kN8v9L5oBWtsK4cjuRK0",
+      "title": "Fundamentals",
+      "kind": "group",
+      "type": "group",
+      "path": "fundamentals",
+      "slug": "fundamentals",
+      "createdAt": "2024-09-24T09:47:50.139Z",
+      "updatedAt": "2024-09-24T09:47:50.139Z",
+      "pages": [
+        {
+          "id": "qkDTbPcF1rutDtS3YJYo",
+          "title": "Getting set up",
+          "emoji": "1f6e0",
+          "kind": "sheet",
+          "type": "document",
+          "urls": {
+            "app": "https://app.gitbook.com/s/hxDBw09hQxpjHimuTkpg/fundamentals/getting-set-up"
+          },
+          "path": "fundamentals/getting-set-up",
+          "slug": "getting-set-up",
+          "documentId": "ziX2XlBk6kaEgeThjLOM",
+          "createdAt": "2024-09-24T09:47:50.141Z",
+          "updatedAt": "2024-09-24T09:47:50.141Z",
+          "git": {
+            "oid": "c0511a31b5796f1422ed1bc5a0eeb63b4a13e19f",
+            "path": "gitbook/product-docs/fundamentals/getting-set-up/README.md"
+          },
+          "pages": [
+            {
+              "id": "p6GtP9iTsw3TYKnQFgw1",
+              "title": "Setting permissions",
+              "emoji": "1f4dd",
+              "kind": "sheet",
+              "type": "document",
+              "urls": {
+                "app": "https://app.gitbook.com/s/hxDBw09hQxpjHimuTkpg/fundamentals/getting-set-up/setting-permissions"
+              },
+              "path": "fundamentals/getting-set-up/setting-permissions",
+              "slug": "setting-permissions",
+              "documentId": "6QfPFTCJPGTb2eswDeke",
+              "createdAt": "2024-09-24T09:47:50.142Z",
+              "updatedAt": "2024-09-24T09:47:50.142Z",
+              "git": {
+                "oid": "6dff410e39399471db0711597cf1d1b43d0ab51d",
+                "path": "gitbook/product-docs/fundamentals/getting-set-up/setting-permissions.md"
+              },
+              "pages": [],
+              "layout": {
+                "cover": true,
+                "coverSize": "full",
+                "title": true,
+                "description": true,
+                "tableOfContents": true,
+                "outline": true,
+                "pagination": true
+              }
+            },
+            {
+              "id": "BRe5afIQdHJCOBSct172",
+              "title": "Inviting Members",
+              "emoji": "1f9d1",
+              "kind": "sheet",
+              "type": "document",
+              "urls": {
+                "app": "https://app.gitbook.com/s/hxDBw09hQxpjHimuTkpg/fundamentals/getting-set-up/inviting-members"
+              },
+              "path": "fundamentals/getting-set-up/inviting-members",
+              "slug": "inviting-members",
+              "documentId": "kWzzwJh4lDA8dTzUZYNn",
+              "createdAt": "2024-09-24T09:47:50.142Z",
+              "updatedAt": "2024-09-24T09:47:50.142Z",
+              "git": {
+                "oid": "49e82cf43095a9a19be662f4f700b010cf186503",
+                "path": "gitbook/product-docs/fundamentals/getting-set-up/inviting-members.md"
+              },
+              "pages": [],
+              "layout": {
+                "cover": true,
+                "coverSize": "full",
+                "title": true,
+                "description": true,
+                "tableOfContents": true,
+                "outline": true,
+                "pagination": true
+              }
+            }
+          ],
+          "layout": {
+            "cover": true,
+            "coverSize": "full",
+            "title": true,
+            "description": true,
+            "tableOfContents": true,
+            "outline": true,
+            "pagination": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "4QsuPWweTYbkiaiubGnl",
+      "title": "Use Cases",
+      "kind": "group",
+      "type": "group",
+      "path": "use-cases",
+      "slug": "use-cases",
+      "createdAt": "2024-09-24T09:47:50.143Z",
+      "updatedAt": "2024-09-24T09:47:50.143Z",
+      "pages": [
+        {
+          "id": "dslwkkHka2QTsFOtXmxE",
+          "title": "For Designers",
+          "emoji": "1f3a8",
+          "kind": "sheet",
+          "type": "document",
+          "urls": {
+            "app": "https://app.gitbook.com/s/hxDBw09hQxpjHimuTkpg/use-cases/for-designers"
+          },
+          "path": "use-cases/for-designers",
+          "slug": "for-designers",
+          "documentId": "503vMU3yEH4oPPcvxfdq",
+          "createdAt": "2024-09-24T09:47:50.143Z",
+          "updatedAt": "2024-09-24T09:47:50.143Z",
+          "git": {
+            "oid": "70f536f341dec43938e0950cf184cc737acdb449",
+            "path": "gitbook/product-docs/use-cases/for-designers.md"
+          },
+          "pages": [],
+          "layout": {
+            "cover": true,
+            "coverSize": "full",
+            "title": true,
+            "description": true,
+            "tableOfContents": true,
+            "outline": true,
+            "pagination": true
+          }
+        },
+        {
+          "id": "g3WMyMmB4zpORD54qzmg",
+          "title": "For Developers",
+          "emoji": "1f5a5",
+          "kind": "sheet",
+          "type": "document",
+          "urls": {
+            "app": "https://app.gitbook.com/s/hxDBw09hQxpjHimuTkpg/use-cases/for-developers"
+          },
+          "path": "use-cases/for-developers",
+          "slug": "for-developers",
+          "documentId": "Ucl0Hu6OxGHlP9d3oAUA",
+          "createdAt": "2024-09-24T09:47:50.144Z",
+          "updatedAt": "2024-09-24T09:47:50.144Z",
+          "git": {
+            "oid": "3b3e8484f4bcd50dacb30b102ebd433c96e9b15f",
+            "path": "gitbook/product-docs/use-cases/for-developers.md"
+          },
+          "pages": [],
+          "layout": {
+            "cover": true,
+            "coverSize": "full",
+            "title": true,
+            "description": true,
+            "tableOfContents": true,
+            "outline": true,
+            "pagination": true
+          }
+        }
+      ]
+    }
+  ],
+  "files": [],
+  "urls": {
+    "app": "https://app.gitbook.com/s/hxDBw09hQxpjHimuTkpg/~/revisions/DMYLQpnWpXiwubyyONPj/"
+  },
+  "createdAt": "2024-09-24T09:50:58.003Z",
+  "git": {
+    "oid": "3bf243963ebed54ec78f8341af30e2991bef2d6b",
+    "message": "GitBook: No commit message",
+    "createdByGitBook": true,
+    "url": "https://github.com/hambergerpls/gbmd-mdoc/commit/3bf243963ebed54ec78f8341af30e2991bef2d6b",
+    "ref": "refs/heads/main"
+  },
+  "type": "edits"
+}
