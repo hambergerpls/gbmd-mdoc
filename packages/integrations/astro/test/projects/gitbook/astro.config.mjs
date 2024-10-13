@@ -2,8 +2,8 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import markdoc from '@astrojs/markdoc';
-import gbmdMdoc from '@gbmd-mdoc/astro';
-import { starlightIntegration } from '@gbmd-mdoc/astro';
+import gbmdMdoc from 'gbmd-mdoc/astro';
+import { starlightIntegration } from 'gbmd-mdoc/astro';
 
 // Manually download space content from Gitbook API
 import spaceData from './product-docs.space.json';

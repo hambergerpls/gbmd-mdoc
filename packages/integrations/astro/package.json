@@ -1,5 +1,5 @@
 {
-  "name": "@gbmd-mdoc/astro",
+  "name": "gbmd-mdoc/astro",
   "version": "0.0.1",
   "description": "Add support for integrating Gitbook Markdown for Astro",
   "scripts": {
@@ -14,6 +14,9 @@
     ],
     "require": "tsx"
   },
+  "files": [
+    "dist"
+  ],
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
