@@ -5,7 +5,7 @@ import markdoc from '@astrojs/markdoc';
 import gbmdMdoc from '@gbmd-mdoc/astro';
 import { starlightIntegration } from '@gbmd-mdoc/astro';
 
-// Manually space content from Gitbook API
+// Manually download space content from Gitbook API
 import spaceData from './product-docs.space.json';
 
 // OR ideally get the space pages from gitbook api
