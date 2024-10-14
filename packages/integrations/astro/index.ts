@@ -90,7 +90,7 @@ function execute({ contentDir, data, syncDir = '', config, slug = '' }:{ content
 
 }
 
-function gbmdMdocIntegration(options: gbmdMdocOptions): AstroIntegration {
+export default function gbmdMdocIntegration(options: gbmdMdocOptions): AstroIntegration {
   return {
     name: "gbmd_mdoc/astro",
     hooks: {
@@ -111,7 +111,3 @@ function gbmdMdocIntegration(options: gbmdMdocOptions): AstroIntegration {
     }
   };
 }
-export {
-  gbmdMdocIntegration as default
-};
-

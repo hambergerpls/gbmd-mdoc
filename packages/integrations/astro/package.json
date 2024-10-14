@@ -2,6 +2,7 @@
   "name": "@gbmd-mdoc/astro",
   "version": "0.0.1",
   "description": "Add support for integrating Gitbook Markdown for Astro",
+  "type": "module",
   "scripts": {
     "test": "mocha",
     "build": "npm run build:common && npm run build:types",
