@@ -1,6 +1,6 @@
 {
   "name": "@gbmd-mdoc/astro",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Add support for integrating Gitbook Markdown for Astro",
   "type": "module",
   "scripts": {
@@ -18,9 +18,10 @@
   "files": [
     "dist"
   ],
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js",
+    "./package.json": "./package.json"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hambergerpls/gbmd-mdoc.git"

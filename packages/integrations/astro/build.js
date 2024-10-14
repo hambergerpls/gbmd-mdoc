@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const { buildSync } = require('esbuild');
+import { buildSync } from 'esbuild';
 
 const shared = {
   bundle: true,
@@ -10,5 +10,4 @@ const shared = {
   format: 'esm',
   platform: 'node',
 };
-buildSync({ ...shared, format: 'cjs' });
-buildSync({ ...shared, outExtension: { '.js': '.mjs' } });
+buildSync(shared);
