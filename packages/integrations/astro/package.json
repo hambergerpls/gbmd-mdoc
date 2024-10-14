@@ -1,6 +1,6 @@
 {
   "name": "@gbmd-mdoc/astro",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Add support for integrating Gitbook Markdown for Astro",
   "type": "module",
   "scripts": {
